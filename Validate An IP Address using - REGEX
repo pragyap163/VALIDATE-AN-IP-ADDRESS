@@ -1,0 +1,9 @@
+import re
+def is_valid_ipv4(ip):
+    
+    pattern = r'^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'
+    return re.match(pattern, ip) is not None
+
+test_ips = ["192.168.1.1", "255.255.255.255", "0.0.0.0", "256.1.1.1", "192.168.01.1", "abc.def.ghi.jkl"]
+for ip in test_ips:
+    print(f"{ip}: {'Valid' if is_valid_ipv4(ip) else 'Invalid'}")
