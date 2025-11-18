@@ -1,0 +1,1 @@
+This program provides a function is_valid_ipv4(ip) that checks if a given string is a valid IPv4 address. It uses a regex pattern to ensure the address consists of four octets (each ranging from 0 to 255) separated by dots, with no leading zeros except for the number 0 itself.
